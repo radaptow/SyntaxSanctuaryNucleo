@@ -33,7 +33,8 @@
       echo vpt();
       echo tuab('Syntax Sanctuary');
       echo arta();
-      echo 'Area de Trabajo 1 default';
+      echo 'Area de Trabajo 1 default<br>';
+      echo '<a href="index.php?ver=documentacion">Acceder a el area de trabajo 2</a>';
       echo cere();
 
 
