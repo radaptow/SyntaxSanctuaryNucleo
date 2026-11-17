@@ -1,0 +1,5 @@
+docker-compose.yml
+.env
+lfs.html
+src/lfs.html
+firstpush.sh
