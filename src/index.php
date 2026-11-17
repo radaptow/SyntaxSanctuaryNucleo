@@ -10,7 +10,7 @@
          echo vpt();
          echo tuab('SyntaxSanctuary');
          echo arta();
-         echo '<a href="workspace/comproint">Area de trabajo</a>';
+         echo 'Area de trabajo 2 Acceso concedido';
          echo cere();
       } else {
          echo ico();
@@ -19,7 +19,7 @@
          echo vpt();
          echo tuab('SyntaxSanctuary');
          echo arta();
-         echo '<a href="workspace/comproint">Area de trabajo</a>';
+         echo 'Area de trabajo 3 Error 404';
          echo cere(); 
       }
 
@@ -33,9 +33,7 @@
       echo vpt();
       echo tuab('Syntax Sanctuary');
       echo arta();
-      echo '<a href="index.php?'
-      .'ver=documentacion">'
-      .'documentacion</a>';
+      echo 'Area de Trabajo 1 default';
       echo cere();
 
 
