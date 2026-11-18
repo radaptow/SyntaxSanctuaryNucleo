@@ -52,22 +52,42 @@ function ebo () {
 }
 #codificacion
 function cfin () {
+  #complemento
+  $__x__ = new Simbolos;
+  $__x__ = new Etiquetas;
+  $__x__ = new Atributos;
   return '<meta charset="UTF-8">';
 }
 #viewport
 function vpt () {
+  #complemento
+  $__x__ = new Simbolos;
+  $__x__ = new Etiquetas;
+  $__x__ = new Atributos;
   return '<meta name="viewport" content="width=device-width, initial-scale=1.0">';
 }
 #titulo tab
 function tuab ($t) {
+  #complemento
+  $__x__ = new Simbolos;
+  $__x__ = new Etiquetas;
+  $__x__ = new Atributos;
   return "<title>$t</title>";
 }
 #apertura
 function arta () {
+  #complemento
+  $__x__ = new Simbolos;
+  $__x__ = new Etiquetas;
+  $__x__ = new Atributos;
   return "</head><body id='ContenedorPrincipal'>";
 }
 #cierre
 function cere () {
+  #complemento
+  $__x__ = new Simbolos;
+  $__x__ = new Etiquetas;
+  $__x__ = new Atributos;
   return "</body></html>";
 }
 #INICIO
