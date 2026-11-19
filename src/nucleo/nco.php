@@ -52,6 +52,7 @@ function ebo () {
   $menor_que = $ncaezad->menor_que ();
   $apertura_html = $ncaezad_etiquetas->html ();
   $idioma = $ncaezad_atributos->lang ();
+  $igual_que = $ncaezad->igual_que ();
   return "<html lang='es'><head>";
 }
 #codificacion
