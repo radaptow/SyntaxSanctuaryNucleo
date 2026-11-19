@@ -22,6 +22,7 @@ class Atributos {
    public function html () { return 'html'; }
    public function clase () { return 'class'; }
    public function id () { return 'id'; }
+   public function lang () { return 'lang'; }
 }
 
 // el acento en este caso son las letras
@@ -48,6 +49,9 @@ function ebo () {
   $ncaezad = new Simbolos;
   $ncaezad_etiquetas = new Etiquetas;
   $ncaezad_atributos = new Atributos;
+  $menor_que = $ncaezad->menor_que ();
+  $apertura_html = $ncaezad_etiquetas->html ();
+  $idioma = $ncaezad_atributos->lang ();
   return "<html lang='es'><head>";
 }
 #codificacion
