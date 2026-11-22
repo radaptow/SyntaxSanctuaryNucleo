@@ -63,9 +63,9 @@ function ebo () {
 #codificacion
 function cfin () {
   #complemento
-  $__x__ = new Simbolos;
-  $__x__ = new Etiquetas;
-  $__x__ = new Atributos;
+  $odicacio = new Simbolos;
+  $odiocacio_etiquetas = new Etiquetas;
+  $odiocacio_atributos = new Atributos;
   return '<meta charset="UTF-8">';
 }
 #viewport
