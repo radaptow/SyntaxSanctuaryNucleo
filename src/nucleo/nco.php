@@ -16,6 +16,7 @@ class Etiquetas {
    public function __construct () {}
    public function documento_html () { return 'DOCTYPE'; }
    public function html () { return 'html'; }
+   public function head () { return 'head'; }
 }
 
 class Atributos {
@@ -54,7 +55,10 @@ function ebo () {
   $apertura_html = $ncaezad_etiquetas->html ();
   $idioma = $ncaezad_atributos->lang ();
   $igual_que = $ncaezad->igual_que ();
-  return "$menor_que$apertura_html $idioma$igual_que'es'><head>";
+  $mayor_que = $ncaezad->mayor_que ();
+  $diagonal_derecha = $ncaezad->diagonal_derecha ();
+  $apertura_head = $ncaezad_etiquetas->head ();
+  return "$menor_que$apertura_html $idioma$igual_que'es'$mayor_que$menor_que$diagonal_derecha$apertura_head$mayor_que";
 }
 #codificacion
 function cfin () {
