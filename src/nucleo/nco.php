@@ -15,6 +15,7 @@ class Simbolos {
 class Etiquetas {
    public function __construct () {}
    public function documento_html () { return 'DOCTYPE'; }
+   public function html () { return 'html'; }
 }
 
 class Atributos {
@@ -53,7 +54,7 @@ function ebo () {
   $apertura_html = $ncaezad_etiquetas->html ();
   $idioma = $ncaezad_atributos->lang ();
   $igual_que = $ncaezad->igual_que ();
-  return "<html lang='es'><head>";
+  return "$menor_que$apertura_html $idioma$igual_que'es'><head>";
 }
 #codificacion
 function cfin () {
