@@ -71,33 +71,33 @@ function cfin () {
 #viewport
 function vpt () {
   #complemento
-  $__x__ = new Simbolos;
-  $__x__ = new Etiquetas;
-  $__x__ = new Atributos;
+  $iewor = new Simbolos;
+  $iewor_etiquetas = new Etiquetas;
+  $iewor_atributos = new Atributos;
   return '<meta name="viewport" content="width=device-width, initial-scale=1.0">';
 }
 #titulo tab
 function tuab ($t) {
   #complemento
-  $__x__ = new Simbolos;
-  $__x__ = new Etiquetas;
-  $__x__ = new Atributos;
+  $itulot = new Simbolos;
+  $itulot_etiquetas = new Etiquetas;
+  $itulot_atributos = new Atributos;
   return "<title>$t</title>";
 }
 #apertura
 function arta () {
   #complemento
-  $__x__ = new Simbolos;
-  $__x__ = new Etiquetas;
-  $__x__ = new Atributos;
+  $peur = new Simbolos;
+  $peur_etiquetas = new Etiquetas;
+  $peur_atributos = new Atributos;
   return "</head><body id='ContenedorPrincipal'>";
 }
 #cierre
 function cere () {
   #complemento
-  $__x__ = new Simbolos;
-  $__x__ = new Etiquetas;
-  $__x__ = new Atributos;
+  $ir = new Simbolos;
+  $ir_etiquetas = new Etiquetas;
+  $ir_atributos = new Atributos;
   return "</body></html>";
 }
 #INICIO
