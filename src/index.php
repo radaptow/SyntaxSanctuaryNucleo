@@ -4,23 +4,32 @@
 
 
       if ( $_GET['ver'] == 'documentacion' ) {
-         echo ico();
-         echo ebo();
+
+        /* echo ico();
+         echo ebo('en');
          echo cfin();
          echo vpt();
          echo tuab('SyntaxSanctuary');
-         echo arta();
-         echo 'Area de trabajo 2 Acceso concedido';
-         echo cere();
+         echo arta();*/
+
+         inicio ('es');
+         
+            echo 'Area de trabajo 2 Acceso concedido';
+         // echo cere(); 
+
+         fin ();
+
       } else {
+
          echo ico();
-         echo ebo();
+         echo ebo('en');
          echo cfin();
          echo vpt();
          echo tuab('SyntaxSanctuary');
          echo arta();
          echo 'Area de trabajo 3 Error 404';
          echo cere(); 
+
       }
 
 
@@ -28,7 +37,7 @@
 
 
       echo ico();
-      echo ebo();
+      echo ebo('en');
       echo cfin();
       echo vpt();
       echo tuab('Syntax Sanctuary');

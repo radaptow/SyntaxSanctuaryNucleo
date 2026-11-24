@@ -17,6 +17,9 @@ class Etiquetas {
    public function documento_html () { return 'DOCTYPE'; }
    public function html () { return 'html'; }
    public function head () { return 'head'; }
+   public function meta () { return 'meta'; }
+   public function title () { return 'title'; }
+   public function body () { return 'body'; }
 }
 
 class Atributos {
@@ -25,6 +28,9 @@ class Atributos {
    public function clase () { return 'class'; }
    public function id () { return 'id'; }
    public function lang () { return 'lang'; }
+   public function charset () { return 'charset'; }
+   public function name () { return 'name'; }
+   public function content () { return 'content'; }
 }
 
 // el acento en este caso son las letras
@@ -46,7 +52,7 @@ function ico () {
   return $menor_que.$signo_admiracion.$documento_html.$atributo_html.$mayor_que;
 }
 #encabezado
-function ebo () {
+function ebo (string $en_que_idioma_esta_el_contenido_de_la_pagina) {
   #complemento
   $ncaezad = new Simbolos;
   $ncaezad_etiquetas = new Etiquetas;
@@ -58,7 +64,7 @@ function ebo () {
   $mayor_que = $ncaezad->mayor_que ();
   $diagonal_derecha = $ncaezad->diagonal_derecha ();
   $apertura_head = $ncaezad_etiquetas->head ();
-  return "$menor_que$apertura_html $idioma$igual_que'es'$mayor_que$menor_que$diagonal_derecha$apertura_head$mayor_que";
+  return "$menor_que$apertura_html $idioma$igual_que'$en_que_idioma_esta_el_contenido_de_la_pagina'$mayor_que$menor_que$diagonal_derecha$apertura_head$mayor_que";
 }
 #codificacion
 function cfin () {
@@ -66,7 +72,12 @@ function cfin () {
   $odicacio = new Simbolos;
   $odiocacio_etiquetas = new Etiquetas;
   $odiocacio_atributos = new Atributos;
-  return '<meta charset="UTF-8">';
+  $menor_que = $odicacio->menor_que ();
+  $metag = $odiocacio_etiquetas->meta ();
+  $charset = $odiocacio_atributos->charset ();
+  $igual_que = $odicacio->igual_que ();
+  $mayor_que = $odicacio->mayor_que ();
+  return $menor_que.$metag.' '.$charset.$igual_que.'"UTF-8"'.$mayor_que;
 }
 #viewport
 function vpt () {
@@ -74,7 +85,13 @@ function vpt () {
   $iewor = new Simbolos;
   $iewor_etiquetas = new Etiquetas;
   $iewor_atributos = new Atributos;
-  return '<meta name="viewport" content="width=device-width, initial-scale=1.0">';
+  $menor_que = $iewor->menor_que ();
+  $metag = $iewor_etiquetas->meta ();
+  $name = $iewor_atributos->name ();
+  $content = $iewor_atributos->content ();
+  $mayor_que = $iewor->mayor_que ();
+  $igual_que = $iewor->igual_que ();
+  return $menor_que.$metag.' '.$name.$igual_que.'"viewport" '.$content.$igual_que.'"width=device-width, initial-scale=1.0"'.$mayor_que;
 }
 #titulo tab
 function tuab ($t) {
@@ -82,7 +99,11 @@ function tuab ($t) {
   $itulot = new Simbolos;
   $itulot_etiquetas = new Etiquetas;
   $itulot_atributos = new Atributos;
-  return "<title>$t</title>";
+  $menor_que = $itulot->menor_que ();
+  $titulo = $itulot_etiquetas->title ();
+  $diagonal_derecha = $itulot->diagonal_derecha ();
+  $mayor_que = $itulot->mayor_que ();
+  return "$menor_que$titulo$mayor_que$t$menor_que$diagonal_derecha$titulo$mayor_que";
 }
 #apertura
 function arta () {
@@ -90,7 +111,14 @@ function arta () {
   $peur = new Simbolos;
   $peur_etiquetas = new Etiquetas;
   $peur_atributos = new Atributos;
-  return "</head><body id='ContenedorPrincipal'>";
+  $menor_que = $peur->menor_que ();
+  $diagonal_derecha = $peur->diagonal_derecha ();
+  $headtag = $peur_etiquetas->head ();
+  $identificador = $peur_atributos->id ();
+  $igual_que = $peur->igual_que ();
+  $mayor_que = $peur->mayor_que ();
+  $bodytag = $peur_etiquetas->body ();
+  return "$menor_que$diagonal_derecha$headtag$mayor_que$menor_que$bodytag $identificador$igual_que'ContenedorPrincipal'$mayor_que";
 }
 #cierre
 function cere () {
@@ -98,15 +126,20 @@ function cere () {
   $ir = new Simbolos;
   $ir_etiquetas = new Etiquetas;
   $ir_atributos = new Atributos;
-  return "</body></html>";
+  $menor_que = $ir->menor_que ();
+  $diagonal_derecha = $ir->diagonal_derecha ();
+  $bodytag = $ir_etiquetas->body ();
+  $mayor_que = $ir->mayor_que ();
+  $htmltag = $ir_etiquetas->html ();
+  return "$menor_que$diagonal_derecha$bodytag$menor_que$diagonal_derecha$htmltag$mayor_que";
 }
 #INICIO
-function inicio () {
+function inicio (string $lang = 'en' , string $titulotab = 'Syntax Sanctuary') {
   echo ico();
-  echo ebo();
+  echo ebo($lang);
   echo cfin();
   echo vpt();
-  echo tuab('Syntax Sanctuary');
+  echo tuab($titulotab);
   echo arta();
 }
 #FIN
